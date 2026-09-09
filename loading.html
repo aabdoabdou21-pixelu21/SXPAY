@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading...</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+font-family:Arial;
+}
+
+.loader{
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+.logo{
+    font-size: 140px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: #00bfff;
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 10px #00bfff,
+        0 0 20px #00bfff,
+        0 0 40px #00bfff,
+        0 0 80px #00bfff,
+        0 0 120px #00bfff;
+
+    animation: glow 1.5s ease-in-out infinite alternate;
+    z-index: 2;
+}
+
+@keyframes glow{
+    from{
+        transform: scale(1);
+        text-shadow:
+            0 0 10px #00bfff,
+            0 0 20px #00bfff,
+            0 0 40px #00bfff;
+    }
+
+    to{
+        transform: scale(1.08);
+        text-shadow:
+            0 0 20px #00bfff,
+            0 0 40px #00bfff,
+            0 0 80px #00bfff,
+            0 0 120px #00bfff;
+    }
+}
+
+.ring{
+position:absolute;
+width:220px;
+height:220px;
+border-radius:50%;
+border:6px solid #00bfff;
+box-shadow:
+0 0 20px #00bfff,
+0 0 50px #00bfff,
+0 0 90px #00bfff;
+animation:spin 3s linear infinite;
+}
+
+.loading{
+color:white;
+margin-top:50px;
+font-size:22px;
+letter-spacing:3px;
+}
+
+.bar{
+width:260px;
+height:8px;
+background:#222;
+margin-top:20px;
+border-radius:20px;
+overflow:hidden;
+}
+
+.progress{
+width:0%;
+height:100%;
+background:#00bfff;
+animation:load 4s linear forwards;
+}
+
+@keyframes spin{
+100%{
+transform:rotate(360deg);
+}
+}
+
+@keyframes zoom{
+100%{
+transform:scale(1.08);
+}
+}
+
+@keyframes load{
+100%{
+width:100%;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="loader">
+
+
+
+<div class="logo">SX</div>
+
+<h2>لماذا تختار <span>SX</span>؟</h2>
+
+<p class="subtitle">
+نحن لا نقدم مجرد منتجات، بل نقدم تجربة تسوق سريعة وآمنة وموثوقة.
+</p>
+
+
+</div>
+
+<script>
+
+setTimeout(function () {
+    window.location.href = "welcome.html";
+}, 2000);
+
+</script>
+
+</body>
+</html>
